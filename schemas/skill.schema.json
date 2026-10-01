@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Digital Employee Skill",
+  "type": "object",
+  "required": [
+    "name",
+    "description",
+    "metadata"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "license": {
+      "enum": [
+        "MIT",
+        "Proprietary"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "author",
+        "version",
+        "standard",
+        "layer"
+      ],
+      "properties": {
+        "layer": {
+          "enum": [
+            "L1-skill",
+            "L2-workflow"
+          ]
+        },
+        "standard": {
+          "const": "agent-skills/v1"
+        }
+      }
+    }
+  }
+}

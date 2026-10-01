@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>钩子文案 · 使用示例</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+      --brand:#0f766e;--brand-soft:#f0fdfa;--code-bg:#f3f4f6;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.78;
+     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);
+        border-bottom:1px solid var(--line);padding:10px 24px;display:flex;gap:12px;align-items:center;font-size:13px}
+.topbar a{color:var(--brand);text-decoration:none;font-weight:600}
+.topbar .name{color:var(--muted)}
+.wrap{max-width:920px;margin:0 auto;padding:28px 24px 80px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:38px 46px;
+     box-shadow:0 1px 3px rgba(0,0,0,.04)}
+h1{font-size:27px;margin:0 0 10px;padding-bottom:14px;border-bottom:2px solid var(--brand)}
+h2{font-size:20px;margin:34px 0 12px;padding-left:12px;border-left:4px solid var(--brand)}
+h3{font-size:17px;margin:24px 0 8px}
+h4{font-size:15px;margin:18px 0 6px;color:#374151}
+a{color:var(--brand)}
+code{background:var(--code-bg);padding:2px 6px;border-radius:4px;font-size:13px;
+     font-family:"SF Mono",Menlo,Consolas,monospace}
+pre{background:#0f172a;color:#e2e8f0;padding:16px 18px;border-radius:10px;overflow-x:auto;line-height:1.62}
+pre code{background:none;color:inherit;padding:0;font-size:12.5px}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px}
+th{background:var(--brand-soft);text-align:left}
+th,td{border:1px solid var(--line);padding:9px 12px;vertical-align:top}
+tr:nth-child(even) td{background:#fafafa}
+blockquote{margin:14px 0;padding:11px 18px;background:var(--brand-soft);
+           border-left:4px solid var(--brand);border-radius:0 8px 8px 0;color:#475569}
+blockquote p{margin:4px 0}
+img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:14px 0;
+    box-shadow:0 1px 3px rgba(0,0,0,.06)}
+hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+ul,ol{padding-left:26px}li{margin:5px 0}
+.hero{background:linear-gradient(135deg,#0f766e,#0d9488 55%,#14b8a6);color:#fff;
+      border-radius:16px;padding:32px 36px;margin-bottom:24px}
+.hero h1{border:none;padding:0;margin:0 0 8px;font-size:27px;color:#fff}
+.hero p{margin:4px 0;opacity:.95;font-size:14px}
+.badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.42);
+       border-radius:999px;padding:3px 12px;font-size:12px;margin:10px 8px 0 0}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 26px 24px;
+        margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:12px;
+      padding:15px 17px;text-decoration:none;color:var(--text);background:#fff;border-top:3px solid var(--brand);
+      transition:.15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,118,110,.13)}
+.ct{font-weight:700;font-size:15px}
+.cd{font-size:13px;color:var(--muted);line-height:1.6}
+.cf{font-size:11px;color:#9ca3af;font-family:"SF Mono",Menlo,monospace}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.shot{text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:12px;
+      overflow:hidden;background:#fff}
+.shot img{margin:0;border:none;border-radius:0;box-shadow:none;display:block}
+.cap{padding:10px 14px;font-size:12.5px;color:#475569}
+.grade{display:inline-block;border-radius:8px;padding:4px 12px;font-size:13px;font-weight:700}
+.g-A{background:#dcfce7;color:#15803d;border:1px solid #86efac}
+.g-B{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
+.g-C{background:#fef3c7;color:#b45309;border:1px solid #fcd34d}
+.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:26px}
+</style></head>
+<body><div class="topbar"><a href="../index.html">← 交付物导航</a><span class="name">钩子文案</span><span class="name" style="margin-left:auto">hook-copy</span></div><div class="wrap"><div class="doc">
+<h1>使用示例</h1>
+<p>技能：<strong>钩子文案</strong>（<code>hook-copy</code>）</p>
+<blockquote>本文档含 <strong>3 组真实执行记录</strong>：输入取自库内测试材料 <code>content/fixtures/opc/</code>（虚拟一人公司「拾光手作」），输出为按本技能「执行步骤」逐条执行后的实际产出。</blockquote>
+<hr>
+<h2>真实效果</h2>
+<blockquote>下列每组「输入 → 输出」都是<strong>真实执行记录</strong>：输入取自库内测试材料 <code>content/fixtures/opc/</code>（虚拟一人公司「拾光手作」），输出为按本技能「执行步骤」逐条执行后的实际产出，未经美化。可据此判断本技能在真实业务里产出长什么样。</blockquote>
+<h3>示例 1 · 出租屋改造 · 小红书（独居租房党）</h3>
+<p><strong>输入</strong></p>
+<pre data-lang="text"><code>- 内容主题：出租屋改造：不改墙不打钉，只靠气味换氛围
+- 目标受众：独居租房党（25–35 岁，一线 / 新一线）
+- 平台：小红书（标题 ≤ 20 字）</code></pre>
+<p><strong>输出</strong></p>
+<pre data-lang="markdown"><code>| 钩子 | 类型 | 机制 | 适用场景 |
+|---|---|---|---|
+| 房东不让钉墙，我换了个法子 | 悬念 | 留一个未完成的动作，逼读者看下去 | 封面大字 / 首句 |
+| 搬家第三次，我只带走气味 | 悬念 · 情绪 | 用「只带走」反衬漂泊感 | 情感向图文开篇 |
+| 租的房子，凭什么不能住得讲究 | 冲突 | 把「租」与「讲究」对立 | 封面标题；评论区易共鸣 |
+| 不打一个孔，先让气味把家换了 | 利益前置 | 承诺零施工成本（不含数字） | 首图大字 / 转化向 |
+| 一个人住的人，都懂这种安静 | 身份代入 | 用「都懂」圈出同温层 | 情绪向开篇 |
+| 让出租屋变高级，最便宜的不是家具 | 反常识 | 打破「高级 = 家具」的默认假设 | 封面标题 |
+
+## 优先 A/B 测试
+- A 组：「房东不让钉墙，我换了个法子」（规避冲突）vs「让出租屋变高级，最便宜的不是家具」（逆向好奇）
+  —— 机制不同，用于区分受众是「痛点驱动」还是「好奇驱动」。
+- B 组：「不打一个孔，先让气味把家换了」（利益前置）—— 验证同一选题下承诺式是否优于悬念式。</code></pre>
+<blockquote><strong>要点</strong>：利益前置型若要带价格（如「X 元换一个家」），材料未给价格 → 必须输出 <code>&lt;待填&gt;</code>，不得自行估价。</blockquote>
+<hr>
+<h3>示例 2 · 劝退三类人 · 小红书（泛人群，反常识向）</h3>
+<p><strong>输入</strong></p>
+<pre data-lang="text"><code>- 内容主题：我做了 3 年手工蜡烛，最想劝退的三类人
+- 目标受众：泛人群
+- 平台：小红书</code></pre>
+<p><strong>输出</strong></p>
+<pre data-lang="markdown"><code>| 钩子 | 类型 | 机制 | 适用场景 |
+|---|---|---|---|
+| 做蜡烛第 3 年，我想劝退三类人 | 反常识 · 身份 | 从业者主动劝退，反商业直觉 | 封面标题 / 首句 |
+| 这三类人，先别买手工蜡烛 | 利益前置（负向） | 用「别买」制造筛选感 | 封面大字 |
+| 手工蜡烛不是越贵越好，是这三类人不适合 | 冲突 | 拆掉「贵 = 好」的默认 | 口播前三秒 |
+| 我劝你别买，是真的 | 反常识 | 自曝动机，强化可信 | 图文开篇 |
+| 做了 3 年，最不想卖的是这类人 | 悬念 | 「哪类人」留钩 | 封面标题 |
+
+## 优先 A/B 测试
+- A 组：「做蜡烛第 3 年，我想劝退三类人」（身份 + 反常识）vs「这三类人，先别买手工蜡烛」（负向利益前置）
+  —— 验证「从业者视角」与「筛选感」哪个更能拉住泛人群。</code></pre>
+<blockquote><strong>要点</strong>：「3 年」「三类人」均来自选题本身；除此之外不得新增任何量化表述。</blockquote>
+<hr>
+<h3>示例 3 · 蜡烛冒黑烟 · 小红书（售后科普向）</h3>
+<p><strong>输入</strong></p>
+<pre data-lang="text"><code>- 内容主题：关于蜡烛「冒黑烟」，其实是这个原因
+- 目标受众：已购客户（售后人群）
+- 平台：小红书</code></pre>
+<p><strong>输出</strong></p>
+<pre data-lang="markdown"><code>| 钩子 | 类型 | 机制 | 适用场景 |
+|---|---|---|---|
+| 蜡烛冒黑烟，不一定是质量问题 | 冲突 | 先接住售后疑虑，避免与客户对立 | 售后科普开篇 |
+| 黑烟的原因，多数出在这一步 | 悬念 | 「这一步」留钩，引导看完 | 口播前三秒 |
+| 先别急着退货，先看芯剪了没 | 利益前置 | 给一个可立即自查的动作 | 客服话术 / 图文 |
+| 冒黑烟不是坏了，是它该修剪了 | 反常识 | 把「故障」重述为「维护」 | 封面标题 |
+| 收到货先做这一件事，能少很多黑烟 | 利益前置 | 给可执行动作，用不定量表述 | 封面大字 |
+
+## 优先 A/B 测试
+- A 组：「蜡烛冒黑烟，不一定是质量问题」（先解对立）vs「冒黑烟不是坏了，是它该修剪了」（重述为维护）
+  —— 售后场景下，用于区分「先安抚」还是「先解释」更有效。</code></pre>
+<blockquote><strong>要点</strong>：首轮曾写「能少一半黑烟」——「一半」在材料中无出处，违反数值纪律，已改为不定量表述「少很多」。售后安抚类尤其不能用编造的比例。</blockquote>
+<hr>
+<h2>平台兼容性验证（真实运行）</h2>
+<pre data-lang="bash"><code># 在技能库根目录执行（技能目录内没有 tools/）
+python3 tests/run.py
+<p><strong>真实输出</strong>：</p>
+<pre data-lang="console"><code>
+==============================================================
+通过  skills/hook-copy
+==============================================================
+  无问题
+
+共检查 1 个技能，错误 0 项。</code></pre>
+<blockquote>本技能已用 OPC 一人公司真实材料完成提示词实测（100% 跑通、零编造，见 <code>`docs/05-验收与测试.md`</code>），并通过平台兼容校验；换成你自己的业务材料请复跑一次。</blockquote>
+<hr>
+<h2>质量自检（交付前必过）</h2>
+<ul><li>[ ] 每条钩子与内容主体一致，不标题党到失真</li><li>[ ] 钩子数量足够做 A/B（≥6 条）</li></ul>
+<hr>
+<h2>附 · 文件位置</h2>
+<table><thead><tr><th>内容</th><th>路径</th></tr></thead><tbody><tr><td>输入夹具</td><td><code>examples/input/</code></td></tr><tr><td>真实输出</td><td><code>examples/output/session.txt</code></td></tr><tr><td>终端截图</td><td><code>docs/images/04-terminal-run.png</code></td></tr><tr><td>录屏</td><td><code>docs/images/08-demo-run.gif</code> · <code>.mp4</code></td></tr></tbody></table>
+</div>
+<div class="footer">生成于 2026-09-30 · 本平台资产库 交付物</div>
+</div></body></html>

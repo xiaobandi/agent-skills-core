@@ -1,0 +1,333 @@
+apiVersion: digital-employee-core/v1
+kind: SkillCore
+metadata:
+  repo: agent-skills-core
+  version: 1.0.0
+  tag: v1.0.0
+  license: MIT
+stats:
+  skills: 26
+  tools: 9
+  connector_defs: 12
+  specs: 1
+  reused_by_employees: 29
+skills:
+- slug: attribution-analysis
+  name: 归因分析
+  used_by:
+  - de_creator_data_reviewer
+  - de_creator_private_traffic_converter
+  - de_ecommerce_shortvideo_producer
+  - de_indie_multichannel_publisher
+  mount_count: 4
+  card_mount_count: 4
+  complexity: M
+  phase: P2
+  maturity: contract-complete
+- slug: brief-generator
+  name: 简报生成
+  used_by:
+  - de_creator_brand_deal_manager
+  - de_ecommerce_customer_service_assistant
+  - de_ecommerce_multichannel_operator
+  - de_ecommerce_product_scout
+  - de_ecommerce_review_guardian
+  - de_ecommerce_shortvideo_producer
+  - de_indie_coldstart_growth_officer
+  - de_indie_feedback_analyst
+  - de_indie_launch_day_commander
+  - de_local_store_daily_report_analyst
+  mount_count: 10
+  card_mount_count: 10
+  complexity: S
+  phase: P1
+  maturity: implemented
+- slug: colloquial-rewrite
+  name: 口语化改写
+  used_by:
+  - de_creator_multichannel_rewriter
+  - de_creator_script_writer
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: complaint-soothe
+  name: 差评安抚话术
+  used_by:
+  - de_ecommerce_review_guardian
+  - de_indie_light_cs_faq
+  - de_local_review_firefighter
+  mount_count: 3
+  card_mount_count: 3
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: compliance-word-scan
+  name: 平台合规词扫描
+  used_by:
+  - de_creator_brand_deal_manager
+  - de_creator_multichannel_rewriter
+  - de_creator_private_traffic_converter
+  - de_creator_script_writer
+  - de_ecommerce_listing_copywriter
+  - de_ecommerce_repurchase_operator
+  - de_ecommerce_visual_designer
+  - de_local_review_firefighter
+  mount_count: 8
+  card_mount_count: 6
+  complexity: M
+  phase: P0
+  maturity: implemented
+- slug: conversion-structure-template
+  name: 转化结构模板
+  used_by:
+  - de_ecommerce_listing_copywriter
+  - de_ecommerce_visual_designer
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P1
+  maturity: contract-complete
+- slug: copy-layout
+  name: 文案排版
+  used_by:
+  - de_creator_brand_deal_manager
+  - de_creator_data_reviewer
+  - de_ecommerce_visual_designer
+  mount_count: 3
+  card_mount_count: 2
+  complexity: S
+  phase: P2
+  maturity: implemented
+- slug: coupon-strategy
+  name: 优惠券策略
+  used_by:
+  - de_local_member_awakener
+  - de_local_private_repeat_buyer_manager
+  mount_count: 2
+  card_mount_count: 1
+  complexity: S
+  phase: P1
+  maturity: contract-complete
+- slug: doc-qa-rag
+  name: 文档问答（RAG）
+  used_by:
+  - de_ecommerce_customer_service_assistant
+  - de_ecommerce_review_guardian
+  - de_indie_light_cs_faq
+  mount_count: 3
+  card_mount_count: 3
+  complexity: M
+  phase: P2
+  maturity: implemented
+- slug: fan-segment-tag
+  name: 粉丝分层打标
+  used_by:
+  - de_creator_comment_operator
+  - de_creator_private_traffic_converter
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P1
+  maturity: implemented
+- slug: groupbuy-copy-writer
+  name: 团购文案生成
+  used_by:
+  - de_local_groupbuy_designer
+  - de_local_store_video_director
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P0
+  maturity: contract-complete
+- slug: hook-copy
+  name: 钩子文案
+  used_by:
+  - de_creator_private_traffic_converter
+  - de_creator_script_writer
+  - de_ecommerce_shortvideo_producer
+  mount_count: 3
+  card_mount_count: 2
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: moments-copy-writer
+  name: 朋友圈文案生成
+  used_by:
+  - de_creator_private_traffic_converter
+  - de_local_private_repeat_buyer_manager
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P1
+  maturity: contract-complete
+- slug: multilingual-writing
+  name: 多语言写作
+  used_by:
+  - de_indie_launch_day_commander
+  - de_indie_light_cs_faq
+  - de_indie_seo_content_assistant
+  mount_count: 3
+  card_mount_count: 3
+  complexity: S
+  phase: P0
+  maturity: contract-complete
+- slug: persona-tone-lib
+  name: 人设语气库
+  used_by:
+  - de_creator_comment_operator
+  - de_creator_private_traffic_converter
+  - de_creator_script_writer
+  mount_count: 3
+  card_mount_count: 2
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: platform-format-adapter
+  name: 平台格式适配
+  used_by:
+  - de_creator_multichannel_rewriter
+  - de_indie_coldstart_growth_officer
+  - de_indie_launch_day_commander
+  - de_indie_multichannel_publisher
+  - de_local_multichannel_ops_hub
+  - de_local_store_video_director
+  mount_count: 6
+  card_mount_count: 6
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: price-monitor
+  name: 价格监控
+  used_by:
+  - de_ecommerce_multichannel_operator
+  - de_ecommerce_product_scout
+  mount_count: 2
+  card_mount_count: 2
+  complexity: M
+  phase: P1
+  maturity: implemented
+- slug: reply-copy-generator
+  name: 回复话术生成
+  used_by:
+  - de_creator_comment_operator
+  - de_creator_private_traffic_converter
+  - de_indie_launch_day_commander
+  - de_local_review_firefighter
+  mount_count: 4
+  card_mount_count: 3
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: review-sentiment-tag
+  name: 评论情绪识别
+  used_by:
+  - de_creator_comment_operator
+  - de_ecommerce_customer_service_assistant
+  - de_ecommerce_review_guardian
+  - de_indie_feedback_analyst
+  - de_indie_launch_day_commander
+  mount_count: 5
+  card_mount_count: 5
+  complexity: M
+  phase: P0
+  maturity: implemented
+- slug: rfm-segmentation
+  name: RFM 分层
+  used_by:
+  - de_ecommerce_repurchase_operator
+  - de_local_member_awakener
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P2
+  maturity: contract-complete
+- slug: scheduled-dispatch
+  name: 定时排期
+  used_by:
+  - de_creator_multichannel_rewriter
+  - de_indie_coldstart_growth_officer
+  - de_indie_finance_tax_assistant
+  - de_indie_launch_day_commander
+  - de_indie_multichannel_publisher
+  - de_local_member_awakener
+  mount_count: 6
+  card_mount_count: 6
+  complexity: S
+  phase: P1
+  maturity: implemented
+- slug: script-structure
+  name: 脚本结构生成
+  used_by:
+  - de_creator_script_writer
+  - de_ecommerce_shortvideo_producer
+  - de_local_store_video_director
+  mount_count: 3
+  card_mount_count: 3
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: title-generator
+  name: 标题生成
+  used_by:
+  - de_creator_multichannel_rewriter
+  - de_creator_topic_planner
+  - de_ecommerce_multichannel_operator
+  - de_indie_coldstart_growth_officer
+  mount_count: 4
+  card_mount_count: 4
+  complexity: S
+  phase: P1
+  maturity: implemented
+- slug: topic-duplicate-check
+  name: 选题查重
+  used_by:
+  - de_creator_comment_operator
+  - de_creator_topic_planner
+  mount_count: 2
+  card_mount_count: 1
+  complexity: S
+  phase: P0
+  maturity: contract-complete
+- slug: topic-kb-manage
+  name: 选题知识库管理
+  used_by:
+  - de_creator_comment_operator
+  - de_creator_data_reviewer
+  - de_creator_topic_planner
+  mount_count: 3
+  card_mount_count: 3
+  complexity: S
+  phase: P0
+  maturity: implemented
+- slug: viral-structure-analysis
+  name: 爆款结构分析
+  used_by:
+  - de_creator_data_reviewer
+  - de_creator_topic_planner
+  mount_count: 2
+  card_mount_count: 2
+  complexity: S
+  phase: P1
+  maturity: implemented
+specs:
+- slug: data-ingest-adapter
+  name: 数据对接
+  used_by:
+  - de_ecommerce_product_scout
+  - de_indie_feedback_analyst
+  - de_indie_multichannel_publisher
+  - de_local_groupbuy_designer
+  - de_local_store_daily_report_analyst
+  why: 报告明确"数据采集连接器族不公共化为 SKILL"——开源侧只发 Spec + Mock + 权限声明
+tools:
+- anomaly_detect.py
+- brief_render.py
+- check_env.py
+- compliance_scan.py
+- format_adapter.py
+- kb_manage.py
+- schedule_plan.py
+- sentiment_tag.py
+- title_gen.py

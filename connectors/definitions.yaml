@@ -1,0 +1,118 @@
+version: 1.0.0
+connectors:
+- id: conn_category_lib
+  name: 平台类目库
+  category: 电商
+  access: read
+  provider: 各电商平台类目/属性表
+  compliance_boundary: 类目映射为只读参考；一次维护多店复用
+  mock_fallback: 手工维护映射表
+  used_by:
+  - de_ecommerce_multichannel_operator
+- id: conn_content_platform
+  name: 内容平台发布与数据
+  category: 内容
+  access: semi
+  provider: 小红书/抖音/视频号
+  compliance_boundary: 发布走草稿 + 人工确认；数据回捞遵守平台规则，不绕过风控
+  mock_fallback: 手工发布 + 截图回填
+  used_by:
+  - de_creator_multichannel_rewriter
+  - de_indie_multichannel_publisher
+  - de_local_store_video_director
+- id: conn_ecom_platform
+  name: 电商平台商品/订单
+  category: 电商
+  access: read
+  provider: 淘宝/抖店/拼多多/快手
+  compliance_boundary: 商品与订单只读；上架草稿需人工确认后提交（write_reserved）
+  mock_fallback: 商家后台导出 Excel
+  used_by:
+  - de_ecommerce_multichannel_operator
+  - de_ecommerce_listing_copywriter
+- id: conn_image_gen
+  name: 图像生成模型 API
+  category: 多模态
+  access: read
+  provider: 文生图 / 图生图
+  compliance_boundary: 须确认商用授权；产出须标注 AI 合成；拒绝侵权与夸大功效
+  mock_fallback: 本地图库合成 / 模板拼版
+  used_by:
+  - de_ecommerce_visual_designer
+- id: conn_llm_inference
+  name: LLM 推理 API
+  category: 运行层
+  access: read
+  provider: 多供应商可替换（开源/低价模型兜底 + 商用 API 分层）
+  compliance_boundary: 不做模型选型锁定；模型是可替换燃料
+  mock_fallback: 本地小模型 / 规则模板
+  used_by:
+  - '*'
+- id: conn_logistics
+  name: 物流查询
+  category: 电商
+  access: read
+  provider: 快递 100 / 平台物流接口
+  compliance_boundary: 只读查询，不做改单、不做拦截
+  mock_fallback: 手工查询
+  used_by:
+  - de_ecommerce_customer_service_assistant
+- id: conn_ocr
+  name: OCR 文字识别
+  category: 多模态
+  access: read
+  provider: 通用 OCR
+  compliance_boundary: 图内文案识别结果仅用于合规检测，不外传原图
+  mock_fallback: 人工录入
+  used_by:
+  - de_ecommerce_visual_designer
+  - de_indie_finance_tax_assistant
+- id: conn_payment
+  name: 支付平台流水
+  category: 财务
+  access: read
+  provider: Stripe/Paddle/支付宝
+  compliance_boundary: 只读流水；发票与台账仅做归类整理，不做申报决策
+  mock_fallback: CSV 导出
+  used_by:
+  - de_indie_finance_tax_assistant
+- id: conn_platform_review
+  name: 平台评价读取
+  category: 电商/本地
+  access: semi
+  provider: 美团/大众点评/抖音生活服务/电商平台
+  compliance_boundary: 接口多为只读或半开放；无 API 时改商家导出 CSV；严禁爬取与诱导删评话术
+  mock_fallback: 商家导出 CSV / 手工填报
+  used_by:
+  - de_local_review_firefighter
+  - de_ecommerce_review_guardian
+  - de_ecommerce_customer_service_assistant
+- id: conn_publish_endpoint
+  name: 平台发布端点（Coze/Dify/WorkBuddy）
+  category: 分发
+  access: write_reserved
+  provider: 智能体平台导入接口
+  compliance_boundary: 资产以标准 SKILL.md / manifest 格式导入；不绑定单一平台
+  mock_fallback: 手动复制导入
+  used_by:
+  - '*'
+- id: conn_rag_kb
+  name: RAG 知识检索
+  category: 运行层
+  access: read
+  provider: 向量库 + 文档解析
+  compliance_boundary: 知识库按资产包隔离，禁止跨包串联客户数据
+  mock_fallback: 本地文件检索 / 关键词匹配
+  used_by:
+  - de_indie_light_cs_faq
+  - de_ecommerce_customer_service_assistant
+- id: conn_wecom
+  name: 企业微信私域
+  category: 私域
+  access: semi
+  provider: 企微 API / 客服
+  compliance_boundary: 触达频率受控，遵守隐私与平台规则；严禁骚扰与诱导
+  mock_fallback: 手工触达 + 话术模板
+  used_by:
+  - de_local_private_repeat_buyer_manager
+  - de_ecommerce_repurchase_operator

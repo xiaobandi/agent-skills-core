@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Digital Employee",
+  "type": "object",
+  "required": [
+    "apiVersion",
+    "kind",
+    "metadata",
+    "deliverables"
+  ],
+  "properties": {
+    "apiVersion": {
+      "const": "digital-employee/v1"
+    },
+    "kind": {
+      "const": "DigitalEmployee"
+    },
+    "metadata": {
+      "required": [
+        "id",
+        "name",
+        "repo",
+        "group",
+        "phase",
+        "license"
+      ]
+    },
+    "deliverables": {
+      "required": [
+        "skills",
+        "workflows",
+        "knowledge_base",
+        "connectors"
+      ],
+      "properties": {
+        "skills": {
+          "type": "array",
+          "minItems": 1
+        },
+        "workflows": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    }
+  }
+}
