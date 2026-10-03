@@ -1,7 +1,7 @@
 {
   "repo": "agent-skills-core",
   "kind": "core",
-  "run_at": "2026-10-01T10:19:35+08:00",
+  "run_at": "2026-10-03T12:06:23+08:00",
   "cases": 635,
   "passed": 635,
   "failed": 0,
