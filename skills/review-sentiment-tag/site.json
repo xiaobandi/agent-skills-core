@@ -1,0 +1,15 @@
+{
+  "name": "review-sentiment-tag",
+  "title": "评论情绪识别",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "M",
+  "phase": "P0",
+  "one_liner": "同 4.4.2-S7（文本 → 情绪标签）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

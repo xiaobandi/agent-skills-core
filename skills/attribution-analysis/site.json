@@ -1,0 +1,15 @@
+{
+  "name": "attribution-analysis",
+  "title": "归因分析",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "M",
+  "phase": "P2",
+  "one_liner": "内容特征与数据表现的关联归因（内容+数据→归因结论+证据链）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

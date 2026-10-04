@@ -1,0 +1,15 @@
+{
+  "name": "colloquial-rewrite",
+  "title": "口语化改写",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "书面语转人设口语，去 AI 腔（文稿→口语化文稿+改写说明）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

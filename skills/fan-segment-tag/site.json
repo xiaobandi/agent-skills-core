@@ -1,0 +1,15 @@
+{
+  "name": "fan-segment-tag",
+  "title": "粉丝分层打标",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "S",
+  "phase": "P1",
+  "one_liner": "基于互动行为的粉丝价值分层（互动记录→铁粉/活跃/路人标签）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

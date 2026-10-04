@@ -1,0 +1,15 @@
+{
+  "name": "script-structure",
+  "title": "脚本结构生成",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "卖点+结构模板→分镜脚本（卖点→脚本）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

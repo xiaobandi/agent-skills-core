@@ -1,0 +1,15 @@
+{
+  "name": "doc-qa-rag",
+  "title": "文档问答（RAG）",
+  "kind": "skill",
+  "owner": "agent-skills-core",
+  "complexity": "M",
+  "phase": "P2",
+  "one_liner": "RAG 检索+口径一致应答（买家问题+知识库→答复）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
