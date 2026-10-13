@@ -3,7 +3,7 @@ name: coupon-strategy
 description: >-
   优惠券策略：券面额/门槛/有效期测算建议。当任务涉及客单价+毛利的处理、且目标产出是券方案时使用——
   即使没有直接说出「优惠券策略」这个词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

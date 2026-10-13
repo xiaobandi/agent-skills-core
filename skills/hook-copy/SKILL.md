@@ -2,7 +2,7 @@
 name: hook-copy
 description: >-
   为内容生成黄金 3 秒开场钩子与引流钩子文案集，直接决定完播与点击。当用户提到钩子文案、开场钩子、黄金3秒、引流钩子、开头怎么写、hook copy、opening hook 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

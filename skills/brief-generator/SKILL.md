@@ -2,7 +2,7 @@
 name: brief-generator
 description: >-
   把零散原始数据与事件汇总成结构化的决策简报，让读者 30 秒内抓住结论与动作。当用户提到生成简报、写简报、汇总成简报、情报简报、晨报、generate brief、data brief、digest 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

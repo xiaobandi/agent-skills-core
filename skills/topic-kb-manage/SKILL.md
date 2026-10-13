@@ -2,7 +2,7 @@
 name: topic-kb-manage
 description: >-
   维护一个可持续生长的选题资产库，支持增删改查、标签权重沉淀与复用统计。当用户提到选题库、选题管理、存选题、查选题、选题查重、选题资产、topic knowledge base、topic library、idea bank 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

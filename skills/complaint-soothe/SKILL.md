@@ -2,7 +2,7 @@
 name: complaint-soothe
 description: >-
   针对负面情绪生成分层安抚回复模板，先接情绪再谈方案，避免火上浇油。当用户提到安抚话术、差评回复、道歉话术、情绪安抚、complaint soothe、apology copy、de-escalation 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

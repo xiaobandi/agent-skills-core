@@ -2,7 +2,7 @@
 name: persona-tone-lib
 description: >-
   维护账号的人设与语气画像，作为所有生成类技能的约束，保证多技能产出风格一致。当用户提到人设语气、语气库、账号人设、保持风格一致、persona tone library、brand voice 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

@@ -2,7 +2,7 @@
 name: title-generator
 description: >-
   按选题与平台批量生成结构化标题候选，每个候选附带所用公式，便于筛选。当用户提到起标题、标题生成、想个标题、标题候选、标题优化、title generator、headline ideas 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

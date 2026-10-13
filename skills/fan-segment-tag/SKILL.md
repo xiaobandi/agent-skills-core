@@ -2,7 +2,7 @@
 name: fan-segment-tag
 description: >-
   按互动频次与价值给粉丝分层打标，产出可直接用于私域运营的分层名单。当用户提到粉丝分层、客户分层、打标签、铁粉识别、会员分层、fan segmentation、customer tagging、tiering 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

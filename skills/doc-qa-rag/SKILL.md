@@ -2,7 +2,7 @@
 name: doc-qa-rag
 description: >-
   基于用户提供的知识库做带引用的事实问答，回答可溯源、找不到就说找不到。当用户提到文档问答、知识库问答、根据文档回答、带引用回答、doc qa、rag、answer from knowledge base 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

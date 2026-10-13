@@ -2,7 +2,7 @@
 name: compliance-word-scan
 description: >-
   把文案或图中文字里的极限词、违禁表述、风险承诺扫出来，给出可定位的违规清单与替换建议。当用户提到合规扫描、极限词检测、违禁词检查、文案体检、广告法合规、敏感词排查、compliance scan、banned words check、ad law compliance 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

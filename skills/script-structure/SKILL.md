@@ -2,7 +2,7 @@
 name: script-structure
 description: >-
   按「钩子-痛点-论证-转化」模板把选题扩写成结构化脚本或分镜表，控制节奏与信息密度。当用户提到写脚本、脚本结构、分镜表、口播稿、短视频脚本、script structure、storyboard、video script 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

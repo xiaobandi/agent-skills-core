@@ -18,8 +18,7 @@
     },
     "license": {
       "enum": [
-        "MIT",
-        "Proprietary"
+        "Apache-2.0"
       ]
     },
     "metadata": {

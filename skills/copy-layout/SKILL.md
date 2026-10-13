@@ -2,7 +2,7 @@
 name: copy-layout
 description: >-
   把卖点与文案按版式栅格组织成可交付的排版稿结构，供视觉落地。当用户提到文案排版、版式、详情页排版、图文排版、copy layout、layout structure 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

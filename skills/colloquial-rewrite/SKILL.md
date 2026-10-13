@@ -2,7 +2,7 @@
 name: colloquial-rewrite
 description: >-
   把书面稿改写为自然口语，适配口播与社交平台，同时降低 AI 痕迹。当用户提到口语化改写、改成口语、太书面了、降AI味改写、colloquial rewrite、make it sound human 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

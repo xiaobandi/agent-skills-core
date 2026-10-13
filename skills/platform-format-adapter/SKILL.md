@@ -2,7 +2,7 @@
 name: platform-format-adapter
 description: >-
   把同一份主稿按目标平台的语境、字数、结构与标签规则重排，产出多个可直接发布的版本。当用户提到平台适配、多平台改写、格式适配、一稿多发、改写成小红书/抖音/公众号版、platform format adapter、repurpose content、multi-platform 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

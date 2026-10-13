@@ -2,7 +2,7 @@
 name: review-sentiment-tag
 description: >-
   对评论流做情绪、主题、风险、优先级四类打标，作为差评预警与客服分流的共用前置。当用户提到情绪分析、评论打标、情感分析、差评识别、评论分级、sentiment analysis、review tagging 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

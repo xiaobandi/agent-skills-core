@@ -2,7 +2,7 @@
 name: price-monitor
 description: >-
   监控竞品价格与促销异动，输出可行动的调价与应对建议。当用户提到价格监控、竞品价格、价格异动、比价、price monitoring、competitor pricing 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

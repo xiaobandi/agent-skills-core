@@ -2,7 +2,7 @@
 name: scheduled-dispatch
 description: >-
   把一批待发内容或待巡检任务按时间规则排成日程，输出可执行的时间表与触发条件。当用户提到排期、定时发布、内容日历、排班表、定时巡检、schedule、content calendar、cron plan 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: MIT
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
